@@ -8,19 +8,19 @@
 <body>
     <h1>Sign Up Now!</h1>
 
-    <form>
+    <form action = '/createUser' method = 'post'>
         <div>
             <label for = 'username'>username:  </label>
             <input type = 'text' name = 'username' id = 'username' required>
         </div>
         <div>
             <label for = 'password'>password:  </label>
-            <input type = 'text' name = 'password' id = 'password' required>
+            <input type = password name = 'password' id = 'password' required>
         </div>
 
         <div>
             <label for = 'rePassword'>Re-enter Password:  </label>
-            <input type = 'text' name = 'rePassword' id = 'rePassword' required>
+            <input type = password name = 'rePassword' id = 'rePassword' required>
         </div>
 
         <div>
@@ -28,7 +28,6 @@
         </div>
     </form>
 
-    Already have an account? <a href = '/login'>Login</a>
-    <a href = '/'>Home</a>
+    Already have an account?  <a href = '/'>Login</a>
 </body>
 </html>
