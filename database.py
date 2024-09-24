@@ -35,11 +35,14 @@ class DatabaseHandler:
     
     def authenticate(self, username, password):
         connection = sql.connect(self.name)
-        connection.cursor.execute("""SELECT username FROM user WHERE username = ? AND password = ?;""",(username, password))
-
-        result = connection.cursor.fetchone()
-
+        cursor = connection.cursor()
+        cursor.execute("""SELECT username
+                        FROM user
+                        WHERE username = ? 
+                        AND password = ? ;""",(username, password))
+        result = cursor.fetchone()
         connection.close()
+
 
         if result is not None:
             return True

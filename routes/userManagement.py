@@ -35,7 +35,7 @@ def authUser():
 
     responce = db.authenticate(username ,password)
     if responce == True:
-        return '<h1> welcome to the website</h1>'
+        return redirect('/dashboard')
     else:
         return '<h1> Error loging in</h1>'
 
