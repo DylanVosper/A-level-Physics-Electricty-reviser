@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel = 'stylesheet' href = {{ url_for('static', filename = 'style.css') }}>
+    <!-- <style>
+        /* input {
+            font-family: 'Microsoft Yi Baiti';
+            color: rgb(0, 0, 0);
+            border-radius: 5px;
+        } */
+    </style> -->
 </head>
-<body>
+<body style="background-color: cornsilk;">
     <h1>Welcome to my page</h1>
 
     <form action = '/auth' method = 'post'>

@@ -1,4 +1,4 @@
-from flask import Blueprint, redirect, render_template, request
+from flask import Blueprint, redirect, render_template, request, session
 from database import DatabaseHandler
 
 db = DatabaseHandler('appData.db')
@@ -7,6 +7,7 @@ db = DatabaseHandler('appData.db')
 signupBP = Blueprint('signup', __name__)
 createUserBP = Blueprint('createUser',__name__)
 authUserBp = Blueprint('authUser', __name__)
+logoutBp = Blueprint('logout', __name__)
 
 # Blueprint Routing
 @signupBP.route("/signup")
@@ -35,7 +36,16 @@ def authUser():
 
     responce = db.authenticate(username ,password)
     if responce == True:
+        session['currentUser'] = username
         return redirect('/dashboard')
     else:
-        return '<h1> Error loging in</h1>'
+        return redirect('/')
+    
+@logoutBp.route('/logout')
+def logout():
+    session.clear()
+    return redirect('/')
+    
+
+
 
