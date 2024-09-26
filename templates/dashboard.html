@@ -4,13 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel = 'stylesheet' href = {{ url_for('static', filename = 'style.css') }}>
 </head>
 <body>
-    <h1>Hello {{ session['currentUser']}}</h1>
-    <a href = '/logout'>Logout</a>
+    <div>
+        <h1>Hello {{ session['currentUser']}}</h1>
+    </div>
 
     <!-- {% for i in range(10) %}
         <P>Welcome</P>
     {% endfor %} -->
+    <div>
+        <form action="/questionReviser">
+            <input type="submit" value="Question Reviser" />
+        </form>
+        <br>
+        <img height="200" width="400" src = 'jamie.jpg' alt="jamie">
+    </div>
+    <br>
+    <div>
+        <form action="/statistics">
+            <input type="submit" value="User Statistics" />
+        </form>
+    </div>
+    <br>
+    <div>
+        <a href = '/logout'>Logout</a>
+    </div>
 </body>
 </html>

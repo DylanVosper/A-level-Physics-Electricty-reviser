@@ -1,30 +1,46 @@
 h1{
     color: rgb(109, 109, 216);
-    font-size: 42px;
-    font-family:'Microsoft Yi Baiti';
+    font-size: 60px;
+    font-family:'Garamond';
     text-align: center;
 }
 
 div{
     color: rgb(109, 109, 216);
     font-size: 21px;
-    font-family:'Microsoft Yi Baiti';
+    font-family:'Garamond';
     text-align: center;
 }
 
 input{
     color: rgb(109, 109, 216);
     font-size: 21px;
-    font-family:'Microsoft Yi Baiti';
+    font-family:'Garamond';
     text-align: center;
     border-radius: 5px;
     border-color: rgb(109, 109, 216);
+    background-color: rgb(237, 240, 252);
 }
 
+/* Microsoft Yi Baiti */
 
 a{
     color: rgb(109, 109, 216);
     font-size: 21px;
-    font-family:'Microsoft Yi Baiti';
+    font-family:'Garamond';
     text-align: center;
+}
+
+body{
+    background-color: cornsilk;
+}
+
+form{
+    margin: 0 auto;
+    width: 210px;
+}
+
+form label{
+    display: inline-block;
+    text-align: right;
 }

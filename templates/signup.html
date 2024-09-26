@@ -4,30 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up page</title>
+    <link rel = 'stylesheet' href = {{ url_for('static', filename = 'style.css') }}>
 </head>
 <body>
     <h1>Sign Up Now!</h1>
 
     <form action = '/createUser' method = 'post'>
-        <div>
-            <label for = 'username'>username:  </label>
+        <div class = 'form'>
+            <label for = 'username'>Username:  </label>
             <input type = 'text' name = 'username' id = 'username' required>
         </div>
-        <div>
-            <label for = 'password'>password:  </label>
+        <div class = 'form'>
+            <label for = 'password'>Password:  </label>
             <input type = password name = 'password' id = 'password' required>
         </div>
-
-        <div>
+        <div class = 'form'>
             <label for = 'rePassword'>Re-enter Password:  </label>
             <input type = password name = 'rePassword' id = 'rePassword' required>
         </div>
-
-        <div>
+        <br>
+        <div class = 'form'>
             <input type = 'submit' value = 'Sign Up'>
+        </div>
+        <br>
+        <div>
+            Already have an account?  <a href = '/'>Login</a>
         </div>
     </form>
 
-    Already have an account?  <a href = '/'>Login</a>
+
 </body>
 </html>
